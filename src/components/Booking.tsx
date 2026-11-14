@@ -43,7 +43,7 @@ export function Booking() {
   const extras = useStore((s) => s.addOns)
   const q = price({ counts, service, frequency, addOns: extras })
   const days = useMemo(() => nextDays(12), [])
-  const [form, setForm] = useState<Partial<Form>>({ entry: 'home' })
+  const [form, setForm] = useState<Partial<Form>>({ date: '', postal: '', entry: 'home', name: '', phone: '', email: '', notes: '' })
   const [errors, setErrors] = useState<Record<string, string>>({})
   const [done, setDone] = useState<string | null>(null)
   const panel = useRef<HTMLDivElement>(null)
