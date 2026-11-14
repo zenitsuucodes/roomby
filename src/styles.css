@@ -191,7 +191,7 @@ legend { font-family: var(--display); font-weight: 800; font-size: 22px; margin-
 /* Plans */
 .plans { background: var(--navy); margin-top: 90px; border-radius: 48px 48px 0 0; }
 .plan-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-.plan { perspective: 1400px; min-height: 420px; }
+.plan { perspective: 1400px; min-height: 520px; }
 .plan-inner { position: relative; height: 100%; min-height: 420px; transform-style: preserve-3d; }
 .plan-face { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; border-radius: 26px; padding: 28px; border: 3px solid var(--white); display: flex; flex-direction: column; gap: 14px; color: var(--navy); }
 .plan-face.back { transform: rotateY(180deg); }
@@ -350,3 +350,15 @@ legend { font-family: var(--display); font-weight: 800; font-size: 22px; margin-
   html { scroll-behavior: auto; }
   .marquee-track, .spin { animation: none; }
 }
+
+/* detail pass */
+.plan-art { width: 100%; max-width: 240px; height: auto; margin: 6px 0 0; overflow: visible; }
+.map-overlay { position: absolute; inset: 26px; width: calc(100% - 52px); height: calc(100% - 52px); pointer-events: none; overflow: visible; }
+.map-tower { position: absolute; width: 30px; height: auto; right: 21%; bottom: 13%; pointer-events: none; filter: drop-shadow(2px 2px 0 rgba(30,42,122,.2)); }
+.map-van { position: absolute; top: 22%; width: 34px; translate: 0 -50%; pointer-events: none; }
+.map-van svg { width: 100%; height: auto; display: block; }
+.note { padding-bottom: 64px; }
+.note-doodle { position: absolute; right: 16px; bottom: 14px; width: 58px; opacity: .9; pointer-events: none; transition: opacity .3s; }
+.note-doodle svg { width: 100%; height: auto; display: block; }
+.note.open .note-doodle { opacity: .25; }
+.tape { position: absolute; top: -10px; right: 22px; width: 54px; height: 20px; background: rgba(255,255,255,.55); border: 1px dashed rgba(30,42,122,.25); rotate: 8deg; }
